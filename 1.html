@@ -3,41 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title>Тест</title>
-
+    <link href="./style.css" rel="stylesheet"/>
 </head>
 <body>
 <p>Ответьте на вопросы<p>
-    <form>
     <form action="/handler.php" method="post">
     <label for="clientName">Ваше имя</label>
-    <input type="text" id="clientName" name="clientName" />
+    <input type="text" id="clientName" name="clientName"/>
     </form>
-
-    <p>Москва-столица<p>
-        <form>
-        <form action="/radio.php" method="post">
-            <p><input type=“radio” value=1 checked name=“myRadio” > России</p>
-            <p><input type=“radio” value=2 name=“myRadio”> США</p>
-            <p><input type=“radio” value=3 name=“myRadio”> Белорусии</p>
+    <p class = "small">Москва-столица<p>
+        <form action="/checkbox.php" method="post">
+            <p><input type="checkbox" value="1" checked name="myRadio">России</p>
+            <p><input type="checkbox" value="2" name="myRadio">США</p>
+            <p><input type="checkbox" value="3" name="myRadio">Белоруcсии</p>
         </form>
 
-    <p>Протяжённость Москвы составляет<p>
-        <form>
+    <p class = "small">Протяжённость Москвы составляет<p>
         <form action="/textarea1.php" method="post">
             <p><textarea rows="5" cols="20" name="text"></textarea></p>
         </form>
-    <p>На территории Москвы протекают реки<p>
+    <p class = "small">На территории Москвы протекают реки<p>
     <form action="select1.php" method="post">
         <p><select size="5" multiple name="choice[]">
             <option disabled>Выберите ответ</option>
-            <option value="Москва река">Москва река</option>
-            <option selected value="Сходня">Сходня</option>
+            <option selected value="Москва река">Москва река</option>
+            <option value="Сходня">Сходня</option>
             <option value="Обь">Обь</option>
             <option value="Волга">Волга</option>
         </select></p>
     </form>
-
-    <p>Часовой пояс Москвы относительно UTC<p>
+    <p class = "small">Часовой пояс Москвы относительно UTC<p>
     <form action="select1.php" method="post">
         <p><select size="3"  name="choice[]">
             <option disabled>Выберите ответ</option>
@@ -45,17 +40,14 @@
             <option value="-3:00">-3:00</option>
             <option value="0:00">0:00</option>
         </select></p>
-
     </form>
-
-    <p>Понравилась статья?<p>
-        <form>
+    <p class = "small">Понравилась статья?<p>
         <form action="/radio.php" method="post">
-            <p><input type=“radio” value=1 checked name=“myRadio”> ответ Да</p>
-            <p><input type=“radio” value=2 name=“myRadio”> ответ Нет</p>
+            <p><input type="radio" value="1" checked name="myRadio"> ответ Да</p>
+            <p><input type="radio" value="2" name="myRadio"> ответ Нет</p>
         </form>
         <form>
             <input type="submit" value="Отправить">
-        <form>
+        </form>
 </body>
 </html>
